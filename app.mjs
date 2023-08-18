@@ -25,6 +25,10 @@ export const printData = async(response)=>{
     xml2js.parseString(response, (err, result)=>{
     const {geodata:{city}} =result;
 
-    console.log(`The city name located at given coordinates is : ${city[0]}`);
+    if (city === undefined){
+        console.log(`\nNo city was found at the at given coordinates. Please check the coordinates and try again!\n`);
+    }else {
+        console.log(`\nThe city name located at given coordinates is : ${city[0]}\n`);
+    }   
 })
 }
