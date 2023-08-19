@@ -16,7 +16,7 @@ if (lat.trim() !== '' && lon.trim() !== ''){
     setTimeout(whereAmI   
     , 1000)
 } else {
-    console.log(`\nPlease enter valid coordinates!\n`)
+    console.log(`\nPlease enter a valid coordinates!\n`)
 }
    
 }
